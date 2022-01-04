@@ -62,6 +62,7 @@ body{
    text-decoration: underline;
    text-decoration-color:white;
  }
+
  table img{
   height:auto;
   max-width:109px;
@@ -85,6 +86,32 @@ body{
 
 }
 
+.row1{
+        margin-top:5%;
+        color:white;
+        display:flex;
+        justify-content:space-around;
+        width:100%;
+        margin:auto;
+        text-align:center;
+        padding-top:50px;
+        flex-direction: row;
+        animation: slideMe 2s ease-in;
+
+      }
+        .course-col{
+        flex-basis:40%;
+        background:black;
+        border-radius: 116px;
+        width:654px;
+        height:182px;
+        margin-bottom:5%;
+        box-sizing: border-box;
+      }
+       .course-col{
+        box-shadow: 0 0 40px 0px rgb(211 ,174 ,109);
+          }
+
 @keyframes slideMe {
     0%{
       transform: skewX(3deg) translateX(-900px);
@@ -96,6 +123,46 @@ body{
 .table1{
   box-shadow: 0 0 40px 0px  rgb(211 ,174 ,109);
 }
+   .row2{
+         color:white;
+          margin-top:2%;
+          display:flex;
+          justify-content:space-around;
+          width:100%;
+          margin:auto;
+          text-align:center;
+          padding-top:50px;
+          flex-direction: row;
+               animation: slideMe2 2s ease-in;
+
+        }
+@keyframes slideMe
+      {
+         0%
+            {
+                transform: skewX(3deg) translateX(-900px);
+             }
+            100%
+            {
+                transform: skew(0deg);
+             }
+      }
+       @keyframes slideMe2 {
+        0%{
+          transform: skewX(3deg) translateX(900px);
+        }
+        100%{
+          transform: skew(0deg);
+        }
+    }
+      table img
+      {
+          height:auto;
+          max-width:115px;
+          width:100%;
+          padding-bottom: 50px;
+          padding-top: 24px;
+      }
 
   </style>
 </head>
@@ -107,44 +174,47 @@ body{
     <li><a href="{% url 'basic_app:principle' %}">Our Principles</a></li>
   </ol>
 
-  <div class="table1">
-    <table>
-      <tr>
-        <th><img src="{% static 'FirstLevel/images/principles1.png' %}"></th>
-        <th><HR COLOR= "grey" WIDTH= "100%" SIZE= "150 PIXEL"></th>
-        <th style="padding-bottom: 33px; padding-left:37px;">Ethical working and transparency in dealing</th>
-      </tr>
-    </table>
-  </div>
-  <br>
-  <div class="table2">
-    <table>
-      <tr>
-        <th><img src="{% static 'FirstLevel/images/Principles2.png' %}"></th>
-        <th><HR COLOR= "GREY" WIDTH= "100%" SIZE= "150 PIXEL"></th>
-        <th style="padding-bottom: 33px;  padding-left:37px; ">Dedication and delivery orientation</th>
-      </tr>
-    </table>
-  </div>
-
-  <div class="table3">
-    <table>
-      <tr>
-        <th><img src="{% static 'FirstLevel/images/principles3.png' %}"></th>
-        <th><HR COLOR= "GREY" WIDTH= "50%" SIZE= "150 PIXEL"></th>
-        <th style="padding-bottom: 33px;  padding-left:37px; ">Service before self interest</th>
-      </tr>
-    </table>
+  <div class="row1">
+      <div class="course-col">
+        <table>
+          <tr>
+            <th><img src="{% static 'FirstLevel/images/principles1.png' %}" style="padding-top: 35px;padding-left: 1px;margin-right: 10px;"></th>
+            <th><HR COLOR= "grey" WIDTH= "100%" SIZE= "150 PIXEL" style="margin-bottom:22px;"></th>
+            <th style="padding-bottom: 50px; padding-left:37px;">Ethical working and transparency in dealing</th>
+          </tr>
+        </table>
+      </div>
+      <div class="course-col">
+        <table>
+          <tr>
+            <th><img src="{% static 'FirstLevel/images/Principles2.png' %}" style="padding-left: 0px;padding-right: 10px;padding-top: 32px;margin-left: 10px;"></th>
+            <th><HR COLOR= "GREY" WIDTH= "100%" SIZE= "150 PIXEL" style="margin-bottom:30px;" ></th>
+            <th style="padding-bottom: 50px;  padding-left:37px;">Dedication and delivery orientation</th>
+          </tr>
+        </table>
+      </div>
   </div>
 
-  <div class="table4">
-    <table>
-      <tr>
-        <th><img src="{% static 'FirstLevel/images/principles4.png' %}"></th>
-        <th><HR COLOR= "GREY" WIDTH= "50%" SIZE= "150 PIXEL"></th>
-        <th style="padding-bottom: 33px; padding-left:37px; ">Building extensive and exhaustive brand partnerships</th>
-      </tr>
-    </table>
+  <div class="row2">
+      <div class="course-col">
+        <table>
+          <tr>
+            <th><img src="{% static 'FirstLevel/images/principles3.png' %}"></th>
+            <th><HR COLOR= "GREY" WIDTH= "50%" SIZE= "150 PIXEL"></th>
+            <th style="padding-bottom: 50px;  padding-left:37px; ">Service before self interest</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="course-col">
+        <table>
+          <tr>
+            <th><img src="{% static 'FirstLevel/images/principles4.png' %}"></th>
+            <th><HR COLOR= "GREY" WIDTH= "50%" SIZE= "150 PIXEL"></th>
+            <th style="padding-bottom: 50px; padding-left:37px; ">Building extensive and exhaustive brand partnerships</th>
+          </tr>
+        </table>
+      </div>
   </div>
 </body>
 </html>

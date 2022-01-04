@@ -1,5 +1,5 @@
 
-        @font-face {
+    @font-face {
             font-family: Accidental Presidency ;
             src: url("{% static 'FirstLevel/fonts/accid_.ttf' %}");
             }
@@ -9,14 +9,17 @@
             src: url("{% static 'FirstLevel/fonts/ARIALNB_2.ttf' %}");
             }
 
-        body{
+         body{
             background-color: black;
             background-image: url("{% static 'FirstLevel/images/4ps.png' %}");
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: 50% 50% ;
+            background-position: 50% 57% ;
             background-size: 500px 450px;
+            overflow:scroll;
             }
+             ::-webkit-scrollbar {
+              width: 0px;}
 
             h1{
           color: white;
@@ -26,7 +29,7 @@
           margin-top:150px;
           }
 
-      ol.oll li+li:before{
+  ol.oll li+li:before{
           padding: 8px;
           color: rgb(211,174,109);
           content: "/\00a0";
@@ -88,6 +91,9 @@
           font-weight: 600;
           font-family: sans-serif;
           margin:0px 0px;
+          text-decoration:underline;
+          text-decoration-color:#d3ae6d;
+          margin-bottom:5px;
         }
 
 
