@@ -24,7 +24,9 @@
     </style>
 </head>
 <body>
-        <H1 class='gos' style="margin-top:130px;position:fixed;right:50px;left:50px;">COMPANY LOGIN</H1>
+        <H1 class='gos' style="top:20%;position:fixed;right:50px;left:50px;">COMPANY LOGIN</H1>
+    <div class="container">
+
         <FORM class="boxx" action="{% url 'basic_app:user_login' %}" method="POST">
             {% csrf_token %}
 
@@ -41,6 +43,7 @@
                 </TABLE>
             </div>
         </FORM>
+    </div>
     <span class="error" style=" position: fixed;bottom: 5%;width: 100%;text-align:center">
         {{Error}}
         {{re}}

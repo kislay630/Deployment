@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width , initial- scale 1.0">
     <title>ESSENCCIA OUTSOURCING</title>
     <link rel="stylesheet" href="{% static 'FirstLevel/css/home_base.css' %}">
-       <link rel="icon" href="{% static 'FirstLevel/images/logo.png' %}" type="image/gif">
-
+    <link rel="icon" href="{% static 'FirstLevel/images/logo.png' %}" type="image/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         UL LI{
             FLOAT:left;
@@ -31,66 +31,17 @@
 </head>
 <body>
 <style>
-    /* width */
-        ::-webkit-scrollbar {
-          width: 10px;
-        }
+ body{overflow:hidden;}
+    ::-webkit-scrollbar {
+    width: 0px;}
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-          background: #888;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-          background: #555;
-        }
-
-                table {
-          border-collapse: collapse;
-          width: 100%;
-        }
-
-                table.one {
-          border-collapse: collapse;
-          width: 263%;
-        }
-
-                table.two {
-          border-collapse: collapse;
-          width: 90%;
-        }
-
-          table.three {
-          border-collapse: collapse;
-          width: 130%;
-        }
-
-        table.four {
-          border-collapse: collapse;
-          width: 90%;
-        }
-
-        table.five {
-          border-collapse: collapse;
-          width: 100%;
-        }
-
-        th, td {
-          text-align:center;
-          padding: 8px;
-        }
-
-        tr:nth-child(even) {background-color: #f2f2f2;}
+    @media (max-width:850px){
+    .nav{display:none;
+    }
 </style>
 <!--OK SEEN-->
 {% if DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'MANAGER' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -118,9 +69,10 @@
             </ul>
         </UL>
     </NAV>
+
 <!--OK SEEN-->
 {% elif DEPARTMENT == 'RECOVERY' and PROCESS == 'FULLERTON' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;ma-width:1492px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -150,7 +102,7 @@
     </NAV>
 <!--OK SEEN-->
 {% elif PROCESS == 'IDFC' and DEPARTMENT == 'HL' and Emp_Status == 'MANAGER' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -180,7 +132,7 @@
     </NAV>
 <!--OK SEEN-->
 {% elif PROCESS == 'BAJAJ' and DEPARTMENT == 'CD' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1530px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -210,7 +162,7 @@
     </NAV>
 <!--NOT OK-->
 {% elif PROCESS == 'HERO' and DEPARTMENT == 'RECOVERY' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -240,7 +192,7 @@
     </NAV>
 <!--NOT OK-->
 {% elif DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'TL' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -261,7 +213,7 @@
     </NAV>
 <!--NOT OK-->
 {% elif DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'TC' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>
@@ -279,7 +231,7 @@
     </NAV>
 <!--OK SEEN-->
 {% elif Emp_Status == 'FOS' %}
-    <NAV style="margin-top:0px;width:1439px;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
+    <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
         <UL class="img1">
             <IMG SRC= "{% static 'FirstLevel/images/logo.png' %}" WIDTH= "100">
         </UL>

@@ -11,6 +11,10 @@ h1{
     font-size: 36px;
 }
 
-.frames::-webkit-scrollbar{width:0;
+.container::-webkit-scrollbar{width:0px;
 display:none;
 }
+body{overflow:scroll;}
+    ::-webkit-scrollbar {
+    width: 0px;}
+
