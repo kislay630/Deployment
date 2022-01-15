@@ -8,15 +8,19 @@
  WIDTH:324%;
  }
 table.T10{
-WIDTH:70%;
+WIDTH:134%;
 }
+table.T13{
+width:170%;}
   table.T11{
   border-collapse: collapse;
    border-spacing: 0;
    width: 87%;
    border: 1px solid #ddd;
  }
-
+ table.T2{
+ width:170%;
+ }
   table.T7{
  WIDTH:270%;
  }
