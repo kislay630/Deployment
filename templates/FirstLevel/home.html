@@ -4,83 +4,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link rel="stylesheet" href="{% static 'FirstLevel/css/home.css'%}">
+  <link rel="stylesheet" href="{% static 'FirstLevel/css/home.css' %}">
   <meta charset="utf-8">
   <title></title>
 </head>
-<style>
-OL
- {
-  float: right;
-  list-style: none;
-  margin-right: 20px;
-  position: relative;
-}
 
-OL LI
-{  float: left;
-  display: inline-block;
-  background:none;
-  margin:0 5px;
-  width:147px;
-  TEXT-ALIGN: CENTER;
-  WIDTH: 140PX;
-  HEIGHT: 33PX;
-  BACKGROUND: NONE;
-    OPACITY: 26.8;
-    LINE-HEIGHT: 31PX;
-    MARGIN-RIGHT: 3PX;
-    margin-bottom: 40px;
-    PADDING-LEFT:0PX;
-}
-OL LI A
-{
- TEXT-DECORATION: NONE;
- COLOR:#d3ae6d;
- FONT-SIZE: 13.5PX;
- padding:8px 1px;
- line-height: 30px;
-}
-OL LI A:HOVER{
-box-shadow: 0 0 5px 0px rgb(211 ,174 ,109);
-}
-.hide{
-display:none;
-}
-.frames1{
-display:block;
-}
-OL.block a{
- text-decoration: none;
- height: 30px;
- width: 74px;
-  display:block;
-  padding: 3px 13px;
-  color: black;
-  font-size: 14px;
-  border-radius: 20px;
-  background:linear-gradient(-45deg, #FFE000 ,#e65c00);
-  cursor: pointer;
-  padding-top: 6px;
-  padding-bottom: 0px;
-}
-
- @media (max-width:1000px) {
-
-.frames1{
-display:none;
-}
-.hide{
-display:block;
-}
-}
-</style>
 <body>
   <H1 style="margin-bottom:0px;position:fixed;background:black;max-width:415px;width:100%;position:0px;margin-top:95px;">Welcome {{name}},</H1>
-  <HR color= #d3ae6d style="margin-bottom:0px;max-width:1482px;width:100%;position:fixed;margin-top:140px;">
+  <HR color= #d3ae6d style="margin-bottom:0px;max-width:1515px;width:100%;position:fixed;margin-top:140px;">
   <br>
   {% if DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'MANAGER' %}
-  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px; position:fixed;">
+  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 561px; position:fixed;">
        <OL class="dash" style="float:right;margin-left:0px;margin-top:22px;width: 145px;padding-left: 0px;">
                 <LI>
                     <A HREF="#"><STRONG>DASHBOARD</STRONG></A>
@@ -107,7 +41,7 @@ display:block;
   </div>
       <iframe  class="frames1"style="width:180px;height:560px;border:2px solid #d3ae6d;margin-top:120px;position:fixed;">
       </iframe>
-  <iframe class="frames" src="salary.html" name="AB" style="margin-left: 184px; max-width: 1330px; width: 100%; height: 558px; position: fixed; border: 2px solid rgb(211, 174, 109); top: 0px !important; margin-top: 148px !important;">
+  <iframe class="frames" src="salary.html" name="AB" style="margin-left: 184px; max-width: 1330px; width: 100%; height: 560px; position: fixed; border: 2px solid rgb(211, 174, 109); top: 0px !important; margin-top: 146px !important;">
   </iframe>
   {% endif %}
 
@@ -152,7 +86,7 @@ display:block;
 <!--  {% endif %}-->
 
   {% if DEPARTMENT == 'CD' and PROCESS == 'BAJAJ' and Emp_Status == 'TL' %}
-  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px;">
+  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 567px;position:fixed;">
        <OL class="dash" style="float:right;margin-left:0px;margin-top:22px;width: 145px;padding-left: 0px;">
             <LI>
                 <A HREF="#"><STRONG>DASHBOARD</STRONG></A>
@@ -183,8 +117,8 @@ display:block;
 ; width: 100%; height: 566px; position: fixed; border: 2px solid rgb(211, 174, 109); top: 0px !important; margin-top: 147px !important;">
   </iframe>
   {% endif %}
-  {% if DEPARTMENT == 'RECOVERY' and PROCESS == 'FOLLERTON' and Emp_Status == 'MANAGER' %}
-  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px;">
+  {% if DEPARTMENT == 'RECOVERY' and PROCESS == 'FULLERTON' and Emp_Status == 'MANAGER' %}
+  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px; position:fixed;">
        <OL class="dash" style="float:right;margin-left:0px;margin-top:22px;width: 145px;padding-left: 0px;">
             <LI>
                 <A HREF="#"><STRONG>DASHBOARD</STRONG></A>
@@ -217,7 +151,7 @@ display:block;
   {% endif %}
 
   {% if DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'TL' %}
-  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px;">
+  <div class="hide" style="border:2px solid #d3ae6d;margin-top: 120px;margin-right: 1337px;width: 180px;height: 577px; position:fixed;">
        <OL class="dash" style="float:right;margin-left:0px;margin-top:22px;width: 145px;padding-left: 0px;">
             <LI>
                 <A HREF="#"><STRONG>DASHBOARD</STRONG></A>
@@ -356,3 +290,5 @@ display:block;
 </body>
 </html>
 {% endblock %}
+
+<!--HOME?-->

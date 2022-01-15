@@ -64,3 +64,30 @@ ul.block A{
 nav{
  width:1584px;
  }
+
+         UL LI{
+            FLOAT:left;
+            WIDTH:160PX;
+            HEIGHT:33PX;
+            BACKGROUND:NONE;
+            OPACITY:.8;
+            LINE-HEIGHT:31PX;
+            MARGIN-RIGHT: 3PX
+            }
+
+        UL LI A{
+            TEXT-DECORATION: NONE;
+            COLOR:WHITE;
+            DISPLAY: BLOCK;
+            TEXT-ALIGN: CENTER;
+            FONT-SIZE: 15PX;
+            }
+
+             body{overflow:hidden;}
+    ::-webkit-scrollbar {
+    width: 0px;}
+
+    @media (max-width:1200px){
+    .nav{display:none;
+    }
+
