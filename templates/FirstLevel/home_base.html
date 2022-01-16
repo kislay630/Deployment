@@ -8,8 +8,37 @@
     <title>ESSENCCIA OUTSOURCING</title>
     <link rel="stylesheet" href="{% static 'FirstLevel/css/home_base.css' %}">
     <link rel="icon" href="{% static 'FirstLevel/images/logo.png' %}" type="image/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        UL LI{
+            FLOAT:left;
+            WIDTH:160PX;
+            HEIGHT:33PX;
+            BACKGROUND:NONE;
+            OPACITY:.8;
+            LINE-HEIGHT:31PX;
+            MARGIN-RIGHT: 3PX
+            }
+
+        UL LI A{
+            TEXT-DECORATION: NONE;
+            COLOR:WHITE;
+            DISPLAY: BLOCK;
+            TEXT-ALIGN: CENTER;
+            FONT-SIZE: 15PX;
+            }
+    </style>
 </head>
 <body>
+<style>
+ body{overflow:hidden;}
+    ::-webkit-scrollbar {
+    width: 0px;}
+
+    @media (max-width:850px){
+    .nav{display:none;
+    }
+</style>
 <!--OK SEEN-->
 {% if DEPARTMENT == 'TW' and PROCESS == 'IDFC' and Emp_Status == 'MANAGER' %}
     <NAV style="margin-top:0px;max-width:1523px;width:100%;height:150px;margin-bottom:0px;position:fixed;background:black;top:0px;left:0px;">
@@ -226,4 +255,3 @@
 {% endblock %}
 </body>
 </html>
-
