@@ -10069,6 +10069,10 @@ def FULLERTON_RECOVERY_BILLING(request):
         else:
             return render(request, 'FirstLevel/Billing.html')
 
+    final_dep = DEP()
+    final_process = COMPANY_PROCESS()
+    Designation = Employee_Designation()
+
     C1 = list(F2.columns)
 
     for j in range(0, len(F2[C1[0]])):
@@ -11082,8 +11086,7 @@ def MASTER_SALARY_TW(request):
                            'Designation': Designation})
 
     elif request.method != 'POST':
-        if (os.path.exists(os.path.join(BASE_DIR, 'media/COMBINED SALARY OF L_T AND IDFC TW/Per PAID CASE.xlsx'))) and (
-        os.path.exists(os.path.join(BASE_DIR, 'media/IDFC_TW/TC Incentive/IDFC_TW TC Incentive.xlsx'))):
+        if (os.path.exists(os.path.join(BASE_DIR, 'media/COMBINED SALARY OF L_T AND IDFC TW/PER PAID CASE.xlsx'))) and (os.path.exists(os.path.join(BASE_DIR, 'media/IDFC_TW/TC Incentive/IDFC_TW TC Incentive.xlsx'))):
             # and (os.path.exists(r'/Users/mohaksehgal/Website_Deployment/media/L_T/TC Incentive/TC Performance L_T.xlsx'))
             final_dep = DEP()
             final_process = COMPANY_PROCESS()
@@ -11219,7 +11222,7 @@ def MASTER_SALARY_TW(request):
         #         excel_data1233.append(row_data223)
         #
         #     return render(request, 'FirstLevel/salary.html', {'excel': excel_data, 'excel2': excel_data1, 'columns': C, 'columns2': C11, 'excel1233': excel_data1233, 'columns1233': C1233, 'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation})
-        elif os.path.exists(os.path.join(BASE_DIR, 'media/COMBINED SALARY OF L_T AND IDFC TW/Per PAID CASE.xlsx')):
+        elif os.path.exists(os.path.join(BASE_DIR, 'media/COMBINED SALARY OF L_T AND IDFC TW/PER PAID CASE.xlsx')):
             final_dep = DEP()
             final_process = COMPANY_PROCESS()
             Designation = Employee_Designation()
@@ -14986,12 +14989,9 @@ def IDFC_HL_EMPLOYEES(request):
         AA = fs.open('Employee_Database.xlsx')
         AA = pd.read_excel(AA)
 
-        A2 = AA[((AA['DESIGNATION'] == 'FOS') | (AA['DESIGNATION'] == 'TC')) & (AA['PROCESS'] == 'IDFC') & (
-                    AA['DEPARTMENT'] == 'HL') & (AA['EMPLOYEE_STATUS'] == 'ACTIVE')]
+        A2 = AA[((AA['DESIGNATION'] == 'FOS') | (AA['DESIGNATION'] == 'TC')) & (AA['PROCESS'] == 'IDFC') & (AA['DEPARTMENT'] == 'HL') & (AA['EMPLOYEE_STATUS'] == 'ACTIVE')]
 
-        A3 = A2[
-            ['NAMES', 'EMPLOYEE_ID', 'MANAGER_ID', 'DESIGNATION', 'STAFF', 'EMPLOYEE_STATUS', 'PROCESS', 'DEPARTMENT',
-             'TYPE_OF_SALARY', 'SALARY', 'PHONE_NUMBER', 'HIRE_DATE']]
+        A3 = A2[['NAMES', 'EMPLOYEE_ID', 'MANAGER_ID', 'DESIGNATION', 'STAFF', 'EMPLOYEE_STATUS', 'PROCESS', 'DEPARTMENT', 'TYPE_OF_SALARY', 'SALARY', 'PHONE_NUMBER', 'HIRE_DATE']]
 
         A3 = A3.reset_index(drop=True)
 
@@ -15123,10 +15123,8 @@ def FULLERTON_RECOVERY_ANALYSIS(request):
     Designation = Employee_Designation()
 
     if request.method != 'POST':
-        if os.path.exists(
-                os.path.join(BASE_DIR, 'media/FULLERTON_RECOVERY/FOS Salary/FOS_SALARY_FULLERTON_RECOVERY.xlsx')):
-            if os.path.exists(
-                    os.path.join(BASE_DIR, 'media/FULLERTON_RECOVERY/BILLING/PAYOUT_FULLERTON_RECOVERY.xlsx')):
+        if os.path.exists(os.path.join(BASE_DIR, 'media/FULLERTON_RECOVERY/FOS Salary/FOS_SALARY_FULLERTON_RECOVERY.xlsx')):
+            if os.path.exists(os.path.join(BASE_DIR, 'media/FULLERTON_RECOVERY/Billing/PAYOUT_FULLERTON_RECOVERY.xlsx')):
                 if os.path.exists(os.path.join(BASE_DIR, 'media/Employees/Employee_Database.xlsx')):
                     fs1 = FileSystemStorage(location='media/FULLERTON_RECOVERY/FOS Salary')
                     fs2 = FileSystemStorage(location='media/FULLERTON_RECOVERY/Billing')
@@ -15140,8 +15138,7 @@ def FULLERTON_RECOVERY_ANALYSIS(request):
                     AA2 = pd.read_excel(AA2)
                     AA3 = pd.read_excel(AA3)
 
-                    AA3 = AA3[(AA3['PROCESS'] == 'FULLERTON') & (AA3['DEPARTMENT'] == 'RECOVERY') & (
-                                AA3['EMPLOYEE_STATUS'] == 'ACTIVE')]
+                    AA3 = AA3[(AA3['PROCESS'] == 'FULLERTON') & (AA3['DEPARTMENT'] == 'RECOVERY') & (AA3['EMPLOYEE_STATUS'] == 'ACTIVE')]
 
                     FIXED_COSTING_FOS = AA1['FIXED_PAYOUT'].sum()
                     INCENTIVE_COSTING_FOS = AA1['INCENTIVE'].sum()
@@ -15153,22 +15150,11 @@ def FULLERTON_RECOVERY_ANALYSIS(request):
                     P_L_FULLERTON_RECOVERY = round(TOTAL_BILLING - FINAL_COSTING, 2)
                     P_L_FULLERTON_RECOVERY_PERCENTAGE = round((P_L_FULLERTON_RECOVERY / TOTAL_BILLING) * 100, 2)
 
-                    return render(request, 'FirstLevel/analysis.html',
-                                  {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation,
-                                   'FIXED_COSTING_FOS': FIXED_COSTING_FOS,
-                                   'INCENTIVE_COSTING_FOS': INCENTIVE_COSTING_FOS, 'TOTAL_BILLING': TOTAL_BILLING,
-                                   'FIXED_COSTING_OFFICE': FIXED_COSTING_OFFICE, 'FINAL_COSTING': FINAL_COSTING,
-                                   'P_L_FULLERTON_RECOVERY': P_L_FULLERTON_RECOVERY,
-                                   'TOTAL_FOS_COSTING': TOTAL_FOS_COSTING,
-                                   'P_L_FULLERTON_RECOVERY_PERCENTAGE': P_L_FULLERTON_RECOVERY_PERCENTAGE})
+                    return render(request, 'FirstLevel/analysis.html',{'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation, 'FIXED_COSTING_FOS': FIXED_COSTING_FOS, 'INCENTIVE_COSTING_FOS': INCENTIVE_COSTING_FOS, 'TOTAL_BILLING': TOTAL_BILLING, 'FIXED_COSTING_OFFICE': FIXED_COSTING_OFFICE, 'FINAL_COSTING': FINAL_COSTING, 'P_L_FULLERTON_RECOVERY': P_L_FULLERTON_RECOVERY, 'TOTAL_FOS_COSTING': TOTAL_FOS_COSTING, 'P_L_FULLERTON_RECOVERY_PERCENTAGE': P_L_FULLERTON_RECOVERY_PERCENTAGE})
             else:
-                return render(request, 'FirstLevel/analysis.html',
-                              {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation,
-                               'STATUS': 'Please Refresh Billing Data'})
+                return render(request, 'FirstLevel/analysis.html', {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation, 'STATUS': 'Please Refresh Billing Data'})
         else:
-            return render(request, 'FirstLevel/analysis.html',
-                          {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation,
-                           'STATUS': 'Please Refresh FOS Salary Data'})
+            return render(request, 'FirstLevel/analysis.html', {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation, 'STATUS': 'Please Refresh FOS Salary Data'})
 
 
 def BAJAJ_CD_ANALYSIS(request):
@@ -15400,6 +15386,8 @@ def IDFC_HL_ANALYSIS(request):
             return render(request, 'FirstLevel/analysis.html',
                           {'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation,
                            'STATUS': 'Please Refresh FOS Salary Data'})
+
+
 def NAV(request):
     final_dep=DEP()
     final_process=COMPANY_PROCESS()

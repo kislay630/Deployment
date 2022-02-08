@@ -1,4 +1,7 @@
-.T1,.T2,.T3,.T6,.T8,.T9, {
+    body{overflow:scroll;}
+    ::-webkit-scrollbar {
+    width: 0px;}
+.T1,.T3,.T6,.T8,.T9, {
    border-collapse: collapse;
    border-spacing: 0;
    width: 170%;
@@ -8,13 +11,18 @@
  WIDTH:324%;
  }
 table.T10{
-WIDTH:70%;
+WIDTH:134%;
 }
+table.T13{
+width:170%;}
   table.T11{
   border-collapse: collapse;
    border-spacing: 0;
    width: 87%;
    border: 1px solid #ddd;
+ }
+ table.T2{
+ width:170%;
  }
 
   table.T7{
@@ -44,12 +52,13 @@ table{
  tr:nth-child(even){background-color: #f2f2f2}
 
  .center {
-   margin: auto;
+   margin-left: 330px;
+   margin-right: auto;
    width: 60%;
    padding: 10px;
      text-align:center;
+     }
 
- }
  .button{
    display: inline-block;
    padding: 15px 25px;
@@ -115,3 +124,10 @@ table{
    box-shadow: 0 5px BLACK;
    transform: translateY(4px);
  }
+     body{
+    overflow:scroll;
+    height: 4600px;
+    width: 1045px;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;}
