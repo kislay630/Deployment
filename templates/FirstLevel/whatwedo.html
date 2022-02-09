@@ -5,6 +5,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial- scale 1.0">
     <link rel="stylesheet" href="{% static 'FirstLevel/css/whatwedo.css' %}">
     <title>WHAT WE DO</title>
     <style>
@@ -70,30 +71,46 @@
     </style>
 </head>
 <body>
-  <h1 style="margin-bottom:0px;margin-top:0px;border-left-style:solid;border-left-width:0px; margin-left:110px; color:white">WHAT WE DO</h1>
-  <hr color="#d3ae6d" style="margin-left:115px; margin-right:50px;">
-  <ol class="breadcrumb" style="width:400px;padding-bottom:10px;padding-left:20px;padding-top:0px;margin-top:0px;">
-    <li>
-      <a href="{% url 'basic_app:index' %}" style="padding-left:75px;" >Home</a>
-    </li>
-    <li>
-      <a href="{% url 'basic_app:whatwedo' %}">What We Do</a>
-    </li>
-  </ol>
-  <section class="servicezzz">
-    <div class="first">
-      <img class="img1" src="{% static 'FirstLevel/images/Picture1.png' %}" alt="">
-      <img class="img2" src="{% static 'FirstLevel/images/Picture2.png' %}" alt="">
-    </div>
+  <section class="service" >
+    <h1 style="margin-bottom:0px;margin-top:52px;border-left-style:solid;border-left-width:0px; margin-left:-36px; color:white">WHAT WE DO</h1>
+    <hr color="#d3ae6d" style="margin-left:-36px; margin-right:0px;">
+    <!-- <h1 style="margin-bottom:0px; margin-top:52px; border-left-style:solid;border-left-width:0px; margin-left:110px; color:white">WHAT WE DO</h1>
+    <hr color="#d3ae6d" style="margin-left:115px; margin-right:50px;"> -->
+    <ol class="breadcrumb" style="width:400px;padding-bottom:10px;padding-left:0px;padding-top:0px;margin-top:0px; margin-left: -36px;">
+      <li>
+        <a href="{% url 'basic_app:index' %}" style="padding-left:-36px;" >Home</a>
+      </li>
+      <li>
+        <a href="{% url 'basic_app:whatwedo' %}" >What We Do</a>
+      </li>
+    </ol>
 
-    <div class="second">
-        <img class="img3" src="{% static 'FirstLevel/images/Picture3.png' %}" alt="">
-    </div>
+      <div class="row">
+        <DIV class="service-col">
+          <img class="img1" src="{% static 'FirstLevel/images/Picture1.png' %}" alt="" style="width:200px;">
+        </DIV>
 
-    <div class="third">
-        <img class="img4" src="{% static 'FirstLevel/images/Picture4.png' %}" alt="">
-        <img class="img5" src="{% static 'FirstLevel/images/Picture5.png' %}" alt="">
-    </div>
+        <DIV class="service-col">
+          <img class="img2" src="{% static 'FirstLevel/images/Picture2.png' %}" alt="" style="width:200px;">
+        </DIV>
+      </div>
+
+      <div class="row2">
+
+        <DIV class="service-col">
+          <img class="img3" src="{% static 'FirstLevel/images/Picture5.png' %}" alt="" style="width:240px;">
+        </DIV>
+
+      </div>
+
+      <div class="row3">
+        <DIV class="service-col">
+          <img class="img4" src="{% static 'FirstLevel/images/Picture3.png' %}" alt="" style="width:200px;">
+        </DIV>
+        <DIV class="service-col">
+          <img class="img5" src="{% static 'FirstLevel/images/Picture4.png' %}" alt="" style="width:133px;">
+        </DIV>
+      </div>
   </section>
 </body>
 </html>
