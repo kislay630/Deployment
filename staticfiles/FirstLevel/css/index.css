@@ -1,12 +1,13 @@
 /* ----------------------------------parameters for 4PS in bottom----------- */
 
 .princ{
-  position: absolute;
-  bottom: 25px;
-  right: 10px;
-  max-width:200px;
-  width:25%;
-  height:auto;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    max-width: 200px;
+    width: 10vw;
+    min-width: 63px;
+    height: auto;
 }
 
 /* --------------------------------THIS IS FOR ALIGNMENT OF CENTER TEXT------------------- */
@@ -28,8 +29,8 @@
     text-decoration:none;
     color:black;
     border: 1px solid black;
-    padding: 11px 10px;
-    font-size: 0.8vw;
+    padding: 0.7vw 10px;
+    font-size: 0.83vw;
     background: #d3ae6d;
     position: relative;
     cursor: pointer;
@@ -62,7 +63,7 @@ body{overflow:scroll;}
             }
 
         .text-box h1{
-            font-size: 2.7vw;
+            font-size: 2.9vw;
             color: rgba(211,174,109,255);
             text-shadow:2px 3px black;
             }
@@ -73,7 +74,7 @@ body{overflow:scroll;}
 
         .text-box p{
             margin:26px 0px 40px;
-            font-size: 1.2vw;
+            font-size: 1.43vw;
             color: white;
             font-family:'Arial Narrow', ARIALNB_2 ;
             }
