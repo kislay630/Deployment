@@ -18,16 +18,15 @@
 }
 
 .error{
-color: white;
+color: black;
     overflow: hidden;
     width: 100%;
     padding: 0px;
     position: relative;
-    top: 17%;
+    top: 26%;
     left: 50%;
     transform: translate(-50% , -50%);
-    background: #191919;
-    opacity: 50%;
+    background: none;
     text-align: center;
 }
 
@@ -59,7 +58,7 @@ H1{
     padding-top: 30px;
     padding-bottom: 20px;
     position: relative;
-    top: 48%;
+    top: 55%;
     left: 50%;
     transform: translate(-50% , -50%);
     background: #191919;
@@ -103,8 +102,7 @@ color: white;
     top: 17%;
     left: 50%;
     transform: translate(-50% , -50%);
-    background: #191919;
-    opacity: 50%;
+    background: none;
     text-align: center;
 }
 
@@ -155,24 +153,3 @@ input::placeholder{
     ::-webkit-scrollbar {
     width: 0px;}
 
-@media(max-width:1300px){
-.boxx{
-color: white;
-width: 22%;
-min-height: 457px;
-height: 60vh;
-min-width: 172px;
-max-width: 445px;
-padding: 40px;
-padding-top: 30px;
-padding-bottom: 20px;
-position: relative;
-top: 50%
-left: 50%;
-transform: translate(-50% , -50%);
-background: #191919;
-opacity: 50%;
-border-radius: 15px;
-text-align: center;
-}
-}
